@@ -15,7 +15,7 @@ def train(Xtrain, Xvalid, centers=2, regression=False):
         gm.append(X)
 
     gm = np.concatenate(gm)
-    model = sklearn.mixture.GaussianMixture(centers, "diag")
+    model = sklearn.mixture.GaussianMixture(n_components=centers, covariance_type="diag")
     gm = model.fit(gm)
 
     component = [Gaussian(torch.Tensor(gm.means_[i, :]),

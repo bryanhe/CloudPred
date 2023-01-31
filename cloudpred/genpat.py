@@ -8,7 +8,7 @@ import logging
 def train(Xtrain, centers=2):
     gm = collections.defaultdict(list)
     for (i, (X, y, *_)) in enumerate(Xtrain):
-        model = sklearn.mixture.GaussianMixture(min(centers, X.shape[0]))
+        model = sklearn.mixture.GaussianMixture(n_components=min(centers, X.shape[0]))
         model.fit(X)
         gm[y].append(model)
     
