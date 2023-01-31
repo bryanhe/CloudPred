@@ -1,21 +1,16 @@
 CloudPred
 =========
 
-This repository contains code for reproducing the experiments from "CloudPred: Predicting Individual Outcome From Heterogeneous Point Clouds".
+This repository contains code for running the code from "CloudPred: Predicting Individual Outcome From Heterogeneous Point Clouds".
 
 ![](figures/cloudpred.png)
 
 Installation
 ------------
 
-First, clone this repository and enter the directory by running:
+Install the package from git using pip:
 
-    git clone https://github.com/echonet/dynamic.git
-    cd dynamic
-
-CloudPred is implemented for Python 3 and can be installed by navigating to the cloned directory and running
-
-    pip install --user .
+    pip install git+https://github.com/VladimirShitov/CloudPred.git
 
 Contents
 --------
