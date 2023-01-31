@@ -14,7 +14,7 @@ def train(Xtrain, centers=2):
     
     for state in gm:
         gm[state] = np.concatenate(gm[state])
-        model = sklearn.mixture.GaussianMixture(centers)
+        model = sklearn.mixture.GaussianMixture(n_components=centers)
         gm[state] = model.fit(gm[state])
 
     return (gm, count)
